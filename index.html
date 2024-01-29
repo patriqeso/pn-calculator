@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Výpočet PN</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="./public/output.css" type="text/css" rel="stylesheet">
+    <script defer src="//cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="script.js"></script>
+
+</head>
+<body>
+
+
+<div class="container mx-auto py-20">
+
+    <h1 class="text-4xl sm:text-5xl font-bold text-sky-700 mb-10 text-center">
+        Výpočet&nbsp;PN a&nbsp;nemocenskej dávky&nbsp;2024
+    </h1>
+
+    <section class="md:border md:border-neutral-400 flex justify-center py-4">
+        <form action="#" id="calculator-pn" class="">
+            <fieldset class="flex flex-col gap-5">
+                <legend class="text-4xl	sm:text-5xl text-center text-blue-950 font-extrabold pb-10 md:underline md:underline-offset-[13px] leading-snug md:leading-leading-none">
+                    Kalkulačka&nbsp;na výpočet&nbsp;PN
+                </legend>
+
+                <div>
+                    <div class="relative mt-2 rounded-md shadow-sm">
+                        <div class="pointer-events-none absolute top-[8px] sm:inset-y-0 left-0 flex items-center pl-3">
+                            <span class="text-neutral-800 sm:text-sm italic font-bold">Príjem za posledných 12 mesiacov:</span>
+                        </div>
+                        <input type="text" name="incomes" id="incomes"
+                               class="h-20 pt-[10px] pl-3 sm:h-fit sm:py-1.5 sm:pl-64 block w-full rounded-md border-0 text-gray-900 placeholder:text-gray-400 sm:text-sm sm:leading-6 ring-1 ring-gray-300 ring-inset focus:outline-none focus:border-sky-600 focus:ring-2 focus:ring-sky-600">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="relative mt-2 rounded-md shadow-sm">
+                        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                            <span class="text-neutral-800 sm:text-sm italic font-bold">Počet dni na PN:</span>
+                        </div>
+                        <input type="text" name="days" id="days"
+                               class="block w-full rounded-md border-0 py-1.5 pl-[9rem] text-gray-900 placeholder:text-gray-400 sm:text-sm sm:leading-6 ring-1 ring-gray-300 ring-inset focus:outline-none focus:border-sky-600 focus:ring-2 focus:ring-sky-600">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="relative mt-2 rounded-md shadow-sm">
+                        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                            <span class="text-neutral-800 sm:text-sm italic font-bold">Denný výmeriavaci základ:</span>
+                        </div>
+                        <input type="text" name="dvz" id="dvz" disabled placeholder="Nezadávate, vypočíta kalkulačka"
+                               class="block w-full rounded-md border-0 py-1.5 pl-56 text-gray-900 placeholder:text-gray-400 sm:text-sm sm:leading-6 ring-1 ring-gray-300 ring-inset focus:outline-none focus:border-sky-600 focus:ring-2 focus:ring-sky-600">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="relative mt-2 rounded-md shadow-sm">
+                        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                            <span class="text-neutral-800 sm:text-sm italic font-bold">Výsledná PN:</span>
+                        </div>
+                        <input disabled type="text" name="result" id="result"
+                               placeholder="Nezadávate, vypočíta kalkulačka"
+                               class="block w-full rounded-md border-0 py-1.5 pl-[7.5rem] text-gray-900 placeholder:text-gray-400 sm:text-sm sm:leading-6 ring-1 ring-gray-300 ring-inset focus:outline-none focus:border-sky-600 focus:ring-2 focus:ring-sky-600">
+                    </div>
+                </div>
+
+                <div>
+                    <input id="submit"
+                           class="bg-sky-600 rounded w-full font-bold text-white text-center py-4 cursor-pointer mb-2"
+                           type="submit"
+                           value="Vypočítať">
+
+                    <input id="reset"
+                           class="hidden bg-orange-600 rounded w-full font-bold text-white text-center py-4 cursor-pointer"
+                           value="Resetovať">
+                </div>
+            </fieldset>
+        </form>
+    </section>
+</div>
+</body>
+</html>
